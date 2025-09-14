@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мій умовний сайт</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "left   main   right"
+                "left   footer footer";
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            gap: 5px;
+        }
+
+        header {
+            grid-area: header;
+            background: #a9c9f4;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        aside {
+            grid-area: left;
+            background: #d6e8d2;
+            padding: 10px;
+        }
+
+        main {
+            grid-area: main;
+            background: #fff;
+            padding: 15px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #a9c9f4;
+            padding: 10px;
+        }
+
+        .right {
+            grid-area: right;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+        }
+
+        .block {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .block-4 {
+            background: #d6e8d2;
+        }
+
+        .block-5 {
+            background: #f6d9c5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мій сайт</h1>
+        <h3>Unlock the Power of Programming</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="page2.html">Сторінка 2</a></li>
+                <li><a href="page3.html">Сторінка 3</a></li>
+                <li><a href="page4.html">Сторінка 4</a></li>
+                <li><a href="page5.html">Сторінка 5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <h2>Вступ у Python</h2>
+        <p>Python — це одна з найпопулярніших мов програмування.</p>
+        <a href="https://www.learnpython.org/" target="_blank">Безкоштовний курс</a>
+    </aside>
+
+    <main>
+        <h2>Чому обирають Python?</h2>
+        <p>Python — проста і потужна мова. Вона використовується в веброзробці, науці про дані, штучному інтелекті та автоматизації.</p>
+        <img src="https://www.python.org/static/community_logos/python-logo.png" width="400">
+        <p>
+            Подивись це відео для початку:
+            <a href="https://www.youtube.com/watch?v=kqtD5dpn9C8" target="_blank">Python для початківців</a>
+        </p>
+    </main>
+
+    <div class="right">
+        <div class="block block-4">
+            <h3>Короткий код</h3>
+            <p>Python дозволяє писати менше коду для вирішення задач.</p>
+        </div>
+        <div class="block block-5">
+            <h3>Велика спільнота</h3>
+            <p>Мільйони людей щодня діляться готовими бібліотеками.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Навчайся програмувати з Python!</p>
+    </footer>
+</body>
+</html>

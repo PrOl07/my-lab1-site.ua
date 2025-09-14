@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мій умовний сайт</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas: "header header header" "left main right" "left footer footer";
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            gap: 5px;
+        }
+
+        header {
+            grid-area: header;
+            background: #a9c9f4;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+        }
+
+        aside {
+            grid-area: left;
+            background: #d6e8d2;
+            padding: 10px;
+        }
+
+        main {
+            grid-area: main;
+            background: #fff;
+            padding: 15px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #a9c9f4;
+            padding: 10px;
+        }
+
+        .right {
+            grid-area: right;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+        }
+
+        .block {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .block-4 {
+            background: #d6e8d2;
+        }
+
+        .block-5 {
+            background: #f6d9c5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мій сайт</h1>
+        <h3>Where Ideas Become Code</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="page2.html">Сторінка 2</a></li>
+                <li><a href="page3.html">Сторінка 3</a></li>
+                <li><a href="page4.html">Сторінка 4</a></li>
+                <li><a href="page5.html">Сторінка 5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <h2>Веброзробка</h2>
+        <p>HTML, CSS і JavaScript — основа будь-якого сайту.</p>
+        <a href="https://www.freecodecamp.org/learn/" target="_blank">Курси з веброзробки</a>
+    </aside>
+
+    <main>
+        <h2>Розробка сайтів</h2>
+        <p>Кожен сучасний сайт складається з HTML (структура), CSS (стилі) та JavaScript (динаміка).</p>
+        <img src="https://www.w3schools.com/whatis/img_html.jpg" width="400">
+        <p>Відео: <a href="https://www.youtube.com/watch?v=pQN-pnXPaVg" target="_blank">Основи веброзробки</a></p>
+    </main>
+
+    <div class="right">
+        <div class="block block-4">
+            <h3>HTML</h3>
+            <p>Створює структуру сторінки.</p>
+        </div>
+        <div class="block block-5">
+            <h3>JavaScript</h3>
+            <p>Надає сайту інтерактивність.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Твори сучасні сайти!</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мій умовний сайт</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "left   main   right"
+                "left   footer footer";
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            gap: 5px;
+        }
+
+        header {
+            grid-area: header;
+            background: #a9c9f4;
+            padding: 10px;
+            text-align: left;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: left;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        aside {
+            grid-area: left;
+            background: #d6e8d2;
+            padding: 10px;
+        }
+
+        main {
+            grid-area: main;
+            background: #fff;
+            padding: 15px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #a9c9f4;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Права колонка для блоків 4 і 5 */
+        .right {
+            grid-area: right;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+        }
+
+        .block {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .block-4 {
+            background: #d6e8d2;
+        }
+
+        .block-5 {
+            background: #f6d9c5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Блок 1 - меню -->
+    <header>
+        <h1>Мій сайт</h1>
+        <h3>Code Your Future, One Line at a Time</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="page2.html">Сторінка 2</a></li>
+                <li><a href="page3.html">Сторінка 3</a></li>
+                <li><a href="page4.html">Сторінка 4</a></li>
+                <li><a href="page5.html">Сторінка 5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Блок 2 -->
+    <aside>
+        <h2>Геть рутину</h2>
+        <p>
+            Програмування відкриває шлях до автоматизації та оптимізації завдань. Простий скрипт може значно скоротити час виконання рутинної роботи.
+        </p>
+    </aside>
+
+    <!-- Блок 3 -->
+    <main>
+        <h2>Трохи про програмування</h2>
+        <p>Програмування — це мистецтво перетворення ідей у реальність за допомогою коду.
+            Кожна програма починається з маленької ідеї, але завдяки правильній архітектурі вона може вирости у великий застосунок.
+            Важливо пам’ятати, що код постійно змінюється, і тому тестування, рефакторинг та використання систем контролю версій є невід’ємною частиною роботи програміста.
+        </p>
+        <p>
+            Мови програмування різняться за своїми можливостями, але всі вони допомагають нам вирішувати задачі: від розробки мобільних застосунків до аналізу даних і створення штучного інтелекту.
+            Головне — це вміння логічно мислити та знаходити нестандартні рішення.
+        </p>
+        <img src="https://ecampusontario.pressbooks.pub/app/uploads/sites/2109/2021/11/programming-gb0e197598_1920.jpg" width="900">
+    </main>
+
+    <!-- Блоки 4 та 5 -->
+    <div class="right">
+        <div class="block block-4">
+            <h3>Алгоритм всьому голова</h3>
+            <p>Алгоритми є основою кожної програми. Вони визначають логіку, за якою працює код</p>
+        </div>
+        <div class="block block-5">
+            <h3>Широкий спектр</h3>
+            <p>Мови програмування надають інструменти для реалізації ідей — від вебсайтів до штучного інтелекту.</p>
+        </div>
+    </div>
+
+    <!-- Блок 6 -->
+    <footer>
+        <h2>"Навчайся та твори!"</h2>
+    </footer>
+
+</body>
+</html>

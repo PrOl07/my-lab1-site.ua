@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мій умовний сайт</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "left   main   right"
+                "left   footer footer";
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            gap: 5px;
+        }
+
+        header {
+            grid-area: header;
+            background: #a9c9f4;
+            padding: 10px;
+            text-align: left;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: left;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        aside {
+            grid-area: left;
+            background: #d6e8d2;
+            padding: 10px;
+        }
+
+        main {
+            grid-area: main;
+            background: #fff;
+            padding: 15px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #a9c9f4;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Права колонка для блоків 4 і 5 */
+        .right {
+            grid-area: right;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+        }
+
+        .block {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .block-4 {
+            background: #d6e8d2;
+        }
+
+        .block-5 {
+            background: #f6d9c5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Блок 1 - меню -->
+    <header>
+        <h1>Мій сайт</h1>
+        <h3>Code Your Dreams into Reality</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="page2.html">Сторінка 2</a></li>
+                <li><a href="page3.html">Сторінка 3</a></li>
+                <li><a href="page4.html">Сторінка 4</a></li>
+                <li><a href="page5.html">Сторінка 5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Блок 2 -->
+    <aside>
+        <h2>Навчання онлайн</h2>
+        <p>
+            Сьогодні кожен охочий може вивчати програмування безкоштовно.
+            Один із кращих ресурсів — <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a>.
+        </p>
+        <img src="https://www.freecodecamp.org/static/wide-image-becdb4c281c527b989315b2f7ce20378.png" width="180">
+    </aside>
+
+    <!-- Блок 3 -->
+    <main>
+        <h2>Вступ до програмування</h2>
+        <p>
+            Програмування відкриває безмежні можливості для творчості. Ви можете створювати вебсайти, ігри,
+            мобільні додатки чи навіть власні інструменти.
+        </p>
+        <p>
+            Хорошим стартом може бути курс на <a href="https://www.codecademy.com/learn/learn-how-to-code" target="_blank">Codecademy</a>.
+            А якщо ви любите відеоуроки, подивіться пояснення на YouTube:
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zOjov-2OZ0E" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <br>
+    </main>
+
+    <!-- Блоки 4 та 5 -->
+    <div class="right">
+        <div class="block block-4">
+            <h3>Алгоритми</h3>
+            <p>
+                Розуміння алгоритмів — ключ до вирішення складних завдань.
+                Більше про це читайте на <a href="https://visualgo.net/en" target="_blank">VisuAlgo</a>.
+            </p>
+        </div>
+        <div class="block block-5">
+            <h3>Мови програмування</h3>
+            <p>
+                Python, JavaScript та C# — найпопулярніші для початку.
+                Безкоштовний довідник є на <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>.
+            </p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg" width="100">
+        </div>
+    </div>
+
+    <!-- Блок 6 -->
+    <footer>
+        <h2>"Навчайся та твори!"</h2>
+    </footer>
+
+</body>
+</html>
